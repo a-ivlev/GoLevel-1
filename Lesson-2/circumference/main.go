@@ -10,6 +10,7 @@ import (
 )
 
 
+// userInput просит пользователя ввести данные и проверяет данные на валидность.
 func userInput() (float64, error) {
 	var s float64
 
