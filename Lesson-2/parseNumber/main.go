@@ -43,12 +43,12 @@ func main() {
 	fmt.Println("Количество десятков ", string(str[1]))
 	fmt.Println("Количество единиц ", string(str[2]))
 
-	edin := num % 10
-	des := ((num-edin)% 100)/10
-	sot := ((num - edin - des)%1000)/100
+	units := num % 10
+	tens := ((num-units)% 100)/10
+	hundreds := ((num - tens - units)%1000)/100
 
 	fmt.Println()
-	fmt.Println("Количество сотен ", sot)
-	fmt.Println("Количество десятков ", des)
-	fmt.Println("Количество единиц ", edin)
+	fmt.Println("Количество сотен ", hundreds)
+	fmt.Println("Количество десятков ", tens)
+	fmt.Println("Количество единиц ", units)
 }
