@@ -1,4 +1,4 @@
-module github.com/GoLevel-1
+module github.com/a-ivlev/GoLevel-1/Lesson-2
 
 go 1.17
 
