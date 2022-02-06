@@ -5,7 +5,7 @@ import (
 )
 
 // Алгоритм сортировки вставками
-func insertion(arr []int) []int {
+func insertionSort(arr []int) {
 	for i := 0; i < len(arr); i++ {
 		for j := i; j > 0; j-- {
 			if arr[j] < arr[j-1] {
@@ -13,14 +13,12 @@ func insertion(arr []int) []int {
 			}
 		}
 	}
-
-	return arr
 }
 
 func main() {
 	arr := []int{9, 5, 3, 6, 8, 7, 1, 2}
 
-	arr = insertion(arr)
+	insertionSort(arr)
 	
 	fmt.Println(arr)
 
