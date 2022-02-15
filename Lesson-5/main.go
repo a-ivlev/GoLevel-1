@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 // fibonacci рекурсивный метод вычисления числа Фибоначчи.
 func fibonacci(n uint64) uint64 {
@@ -39,7 +41,7 @@ func fibonacciClassicCache(n uint64, cache map[uint64]uint64) uint64 {
 
 // fibonacciCache Оптимизация приложения за счёт сохранения предыдущих результатов в мапе.
 func fibonacciCache(n uint64, cache map[uint64]uint64) uint64 {
-	if n == 2 || n == 1 {
+	if n == 1 || n == 2 {
 		return 1
 	}
 
@@ -52,11 +54,12 @@ func fibonacciCache(n uint64, cache map[uint64]uint64) uint64 {
 
 func main() {
 
-	n:= uint64(10)
-
+	n := uint64(20)
+	
 	cache := make(map[uint64]uint64, n)
 
-	fmt.Println("fib = ", fibonacciCache(n, cache))
+	// fmt.Println("fib = ", fibonacciCache(n, cache))
 
+	fmt.Println("fib =", fibonacciClassicCache(n, cache))
 }
 
